@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.ifsp.detectorqueda">
+
+    <!-- Permissões -->
+
+    <!-- Vibração do Smartphone -->
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <!-- Envio de mensagens -->
+    <uses-permission android:name="android.permission.SEND_SMS"/>
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        <!-- ACTIVITIES -->
+        <!-- MainActivity -->
+        <activity android:name=".activities.MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- DetectorActivity -->
+        <activity
+            android:name=".activities.DetectorActivity"
+            android:parentActivityName=".activities.MainActivity">
+
+            <!-- Meta-tag necessária para suportar api level 15 ou menor -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".activities.MainActivity" />
+        </activity>
+
+        <!-- AlertaQuedaActivity -->
+        <activity android:name=".activities.AlertaQuedaActivity">
+        </activity>
+
+        <!-- FichaMedicaActivity -->
+        <activity android:name=".activities.FichaMedicaActivity">
+        </activity>
+
+        <!-- CadastroGeralActivity -->
+        <activity android:name=".activities.CadastroGeralActivity">
+        </activity>
+
+        <!-- CadastroAlergiaActivity -->
+        <activity android:name=".activities.CadastroAlergiaActivity"
+            android:parentActivityName=".activities.CadastroGeralActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".activities.CadastroGeralActivity" />
+        </activity>
+
+        <!-- CadastroMedicamentoActivity -->
+        <activity android:name=".activities.CadastroMedicamentoActivity"
+            android:parentActivityName=".activities.CadastroAlergiaActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".activities.CadastroAlergiaActivity" />
+        </activity>
+
+        <!-- CadastroContatoEmergenciaActivity -->
+        <activity android:name=".activities.CadastroContatoEmergenciaActivity"
+            android:parentActivityName=".activities.CadastroMedicamentoActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".activities.CadastroMedicamentoActivity" />
+        </activity>
+
+        <!-- SERVICES -->
+        <!-- DetectorQuedaService -->
+        <service android:name=".services.DetectorQuedaService"
+            android:exported="false"/>
+
+        <!-- AlertaService -->
+        <service android:name=".services.AlertaService"
+            android:exported="false"/>
+
+        <!-- EnvioMensagemService -->
+        <service android:name=".services.EnvioMensagemService"
+            android:exported="false"/>
+
+        <!-- EnvioMensagemWhatsAppService -->
+        <service android:name=".services.EnvioMensagemWhatsappService"
+            android:exported="false"/>
+    </application>
+
+</manifest>

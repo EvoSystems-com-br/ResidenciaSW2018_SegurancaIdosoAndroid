@@ -1,0 +1,315 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.CadastroAlergiaActivity">
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/Constraint"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingEnd="10dp"
+        android:paddingStart="10dp">
+
+        <TextView
+            android:id="@+id/txtTitulo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/cadastro_geral_txt_titulo"
+            android:textSize="0sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"/>
+
+        <TextView
+            android:id="@+id/txtAlerta"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:textColor="@color/colorTextAlertGeralEmergencia"
+            android:textSize="15sp"
+            app:layout_constraintTop_toBottomOf="@id/txtTitulo"/>
+
+        <TextView
+            android:id="@+id/txtNome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="5dp"
+            android:text="@string/cadastro_geral_txt_nome"
+            android:textSize="15sp"
+            android:labelFor="@+id/edtNome"
+            app:layout_constraintTop_toBottomOf="@id/txtAlerta"
+            app:layout_constraintBaseline_toBaselineOf="@id/edtNome"/>
+
+        <EditText
+            android:id="@+id/edtNome"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:maxLength="150"
+            android:textSize="15sp"
+            android:inputType="textPersonName"
+            app:layout_constraintTop_toBottomOf="@id/txtAlerta"
+            app:layout_constraintStart_toEndOf="@id/txtDataNascimento"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <TextView
+            android:id="@+id/txtDataNascimento"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="5dp"
+            android:text="@string/cadastro_geral_txt_data_nascimento"
+            android:textSize="15sp"
+            android:labelFor="@+id/edtDataNascimento"
+            app:layout_constraintTop_toBottomOf="@id/edtNome"
+            app:layout_constraintBaseline_toBaselineOf="@id/edtDataNascimento"/>
+
+        <com.vicmikhailau.maskededittext.MaskedEditText
+            android:id="@+id/edtDataNascimento"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            app:mask="##/##/####"
+            android:maxLength="10"
+            android:textSize="15sp"
+            app:layout_constraintTop_toBottomOf="@id/txtNome"
+            app:layout_constraintStart_toEndOf="@id/txtDataNascimento"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <TextView
+            android:id="@+id/txtGrupoSanguineo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="5dp"
+            android:text="@string/cadastro_geral_txt_grupo_sanguineo"
+            android:textSize="15sp"
+            android:layout_weight="1"
+            app:layout_constraintTop_toBottomOf="@id/edtDataNascimento" />
+
+        <Spinner
+            android:id="@+id/spnGrupoSanguineo"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:maxLength="3"
+            android:textSize="15sp"
+            app:layout_constraintTop_toBottomOf="@id/txtDataNascimento"
+            app:layout_constraintStart_toEndOf="@id/txtDataNascimento"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <TextView
+            android:id="@+id/txtAltura"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="5dp"
+            android:text="@string/cadastro_geral_txt_altura"
+            android:textSize="15sp"
+            app:layout_constraintTop_toBottomOf="@id/txtGrupoSanguineo"
+            app:layout_constraintBaseline_toBaselineOf="@id/edtAltura"/>
+
+        <com.vicmikhailau.maskededittext.MaskedEditText
+            android:id="@+id/edtAltura"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            app:mask="#.##"
+            android:maxLength="5"
+            android:textSize="15sp"
+            app:layout_constraintTop_toBottomOf="@id/txtGrupoSanguineo"
+            app:layout_constraintStart_toEndOf="@id/txtAltura"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <TextView
+            android:id="@+id/txtPeso"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="5dp"
+            android:text="@string/cadastro_geral_txt_peso"
+            android:textSize="15sp"
+            app:layout_constraintTop_toBottomOf="@id/txtAltura"
+            app:layout_constraintBaseline_toBaselineOf="@id/edtPeso"/>
+
+        <com.vicmikhailau.maskededittext.MaskedEditText
+            android:id="@+id/edtPeso"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            app:mask="##.##"
+            android:maxLength="5"
+            android:textSize="15sp"
+            app:layout_constraintTop_toBottomOf="@id/txtAltura"
+            app:layout_constraintStart_toEndOf="@id/txtAltura"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+
+        <TextView
+            android:id="@+id/txtEndereco"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:text="@string/cadastro_geral_txt_titulo_endereco"
+            android:textSize="20sp"
+            app:layout_constraintTop_toBottomOf="@id/edtPeso" />
+
+        <TextView
+            android:id="@+id/txtLogradouro"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="5dp"
+            android:text="@string/cadastro_geral_txt_logradouro"
+            android:labelFor="@+id/edtLogradouro"
+            android:textSize="15sp"
+            app:layout_constraintTop_toBottomOf="@id/txtEndereco"
+            app:layout_constraintBaseline_toBaselineOf="@id/edtLogradouro"/>
+
+        <EditText
+            android:id="@+id/edtLogradouro"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:maxLength="150"
+            android:textSize="15sp"
+            android:inputType="text"
+            app:layout_constraintTop_toBottomOf="@id/txtEndereco"
+            app:layout_constraintStart_toEndOf="@id/txtComplemento"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <TextView
+            android:id="@+id/txtNumero"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="5dp"
+            android:text="@string/cadastro_geral_txt_numero"
+            android:labelFor="@+id/edtNumero"
+            android:textSize="15sp"
+            app:layout_constraintTop_toBottomOf="@id/txtLogradouro"
+            app:layout_constraintBaseline_toBaselineOf="@id/edtNumero"/>
+
+        <EditText
+            android:id="@+id/edtNumero"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:maxLength="15"
+            android:textSize="15sp"
+            android:inputType="text"
+            app:layout_constraintTop_toBottomOf="@id/txtLogradouro"
+            app:layout_constraintStart_toEndOf="@id/txtComplemento"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <TextView
+            android:id="@+id/txtCep"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="5dp"
+            android:text="@string/cadastro_geral_txt_cep"
+            android:textSize="15sp"
+            app:layout_constraintTop_toBottomOf="@id/txtNumero"
+            app:layout_constraintBaseline_toBaselineOf="@id/edtCep"/>
+
+        <com.vicmikhailau.maskededittext.MaskedEditText
+            android:id="@+id/edtCep"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            app:mask="#####-###"
+            android:maxLength="9"
+            android:textSize="15sp"
+            app:layout_constraintTop_toBottomOf="@id/txtNumero"
+            app:layout_constraintStart_toEndOf="@id/txtComplemento"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <TextView
+            android:id="@+id/txtBairro"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="5dp"
+            android:text="@string/cadastro_geral_txt_bairro"
+            android:labelFor="@+id/edtBairro"
+            android:textSize="15sp"
+            app:layout_constraintTop_toBottomOf="@id/txtCep"
+            app:layout_constraintBaseline_toBaselineOf="@id/edtBairro"/>
+
+        <EditText
+            android:id="@+id/edtBairro"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:maxLength="100"
+            android:textSize="15sp"
+            android:inputType="text"
+            app:layout_constraintTop_toBottomOf="@id/txtCep"
+            app:layout_constraintStart_toEndOf="@id/txtComplemento"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <TextView
+            android:id="@+id/txtCidade"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="5dp"
+            android:text="@string/cadastro_geral_txt_cidade"
+            android:labelFor="@+id/edtCidade"
+            android:textSize="15sp"
+            app:layout_constraintTop_toBottomOf="@id/txtBairro"
+            app:layout_constraintBaseline_toBaselineOf="@id/edtCidade"/>
+
+        <EditText
+            android:id="@+id/edtCidade"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:maxLength="100"
+            android:textSize="15sp"
+            android:inputType="text"
+            app:layout_constraintTop_toBottomOf="@id/txtBairro"
+            app:layout_constraintStart_toEndOf="@id/txtComplemento"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <TextView
+            android:id="@+id/txtEstado"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="5dp"
+            android:text="@string/cadastro_geral_txt_estado"
+            android:textSize="15sp"
+            app:layout_constraintTop_toBottomOf="@id/edtCidade" />
+
+        <Spinner
+            android:id="@+id/spnEstado"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:maxLength="100"
+            android:textSize="15sp"
+            app:layout_constraintTop_toBottomOf="@id/txtCidade"
+            app:layout_constraintStart_toEndOf="@id/txtComplemento"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <TextView
+            android:id="@+id/txtComplemento"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="5dp"
+            android:text="@string/cadastro_geral_txt_complemento"
+            android:labelFor="@+id/edtComplemento"
+            android:textSize="15sp"
+            app:layout_constraintTop_toBottomOf="@id/txtEstado"
+            app:layout_constraintBaseline_toBaselineOf="@id/edtComplemento"/>
+
+        <EditText
+            android:id="@+id/edtComplemento"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:maxLength="50"
+            android:textSize="15sp"
+            android:inputType="text"
+            app:layout_constraintTop_toBottomOf="@id/txtEstado"
+            app:layout_constraintStart_toEndOf="@id/txtComplemento"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <Button
+            android:id="@+id/btnProximo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/cadastro_geral_btn_proximo"
+            android:layout_gravity="center"
+            app:layout_constraintTop_toBottomOf="@id/edtComplemento"
+            app:layout_constraintLeft_toRightOf="parent"
+            app:layout_constraintRight_toLeftOf="parent"/>
+    </android.support.constraint.ConstraintLayout>
+</ScrollView>
