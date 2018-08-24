@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.AlertaQuedaActivity">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:contentDescription="@string/alertaqueda_descriptionImage_background"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/btnNao"
+        android:background="@color/colorNotAlertQueda"/>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:contentDescription="@string/alertaqueda_descriptionImage_background"
+        app:layout_constraintTop_toBottomOf="@id/btnSim"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:background="@color/colorAlertQueda"/>
+
+    <Button
+        android:id="@+id/btnSim"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@null"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/btnNao" />
+
+    <Button
+        android:id="@+id/btnNao"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@null"
+        app:layout_constraintTop_toBottomOf="@id/btnSim"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+    <TextView
+        android:id="@+id/txtTitulo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/alertaqueda_txt_informativo"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@id/btnSim"
+        android:layout_marginTop="5dp"/>
+
+    <TextView
+        android:id="@+id/txtPergunta"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/alertaqueda_txt_pergunta"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txtTitulo" />
+
+    <ImageView
+        android:id="@+id/imgStickStanding"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:src="@drawable/alert_stickstanding"
+        android:contentDescription="@string/alertaqueda_descriptionImage_icons"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/imgGood"
+        app:layout_constraintTop_toTopOf="@id/btnSim"
+        app:layout_constraintBottom_toBottomOf="@id/btnSim"/>
+
+    <ImageView
+        android:id="@+id/imgGood"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:src="@drawable/alert_good"
+        android:contentDescription="@string/alertaqueda_descriptionImage_icons"
+        app:layout_constraintTop_toTopOf="@id/btnSim"
+        app:layout_constraintBottom_toBottomOf="@id/btnSim"
+        app:layout_constraintLeft_toRightOf="@id/imgStickStanding"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+    <TextView
+        android:id="@+id/txtBotaoSim"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/alertaqueda_btn_resposta_s"
+        android:textColor="@color/colorTextAlertQueda"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/imgGood"
+        android:layout_marginTop="5dp"
+        android:textStyle="bold"
+        android:textAllCaps="true"
+        android:textSize="20sp"/>
+
+    <TextView
+        android:id="@+id/txtDescricaoSim"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/alertaqueda_descriptionBtns"
+        android:textColor="@color/colorTextAlertQueda"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txtBotaoSim"
+        android:textAllCaps="true"
+        android:textSize="12sp"/>
+
+    <ImageView
+        android:id="@+id/imgStickFallen"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:src="@drawable/alert_stickfallen"
+        android:contentDescription="@string/alertaqueda_descriptionImage_icons"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/imgBad"
+        app:layout_constraintTop_toTopOf="@id/btnNao"
+        app:layout_constraintBottom_toBottomOf="@id/btnNao"/>
+
+    <ImageView
+        android:id="@+id/imgBad"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:src="@drawable/alert_bad"
+        android:contentDescription="@string/alertaqueda_descriptionImage_icons"
+        app:layout_constraintTop_toTopOf="@id/btnNao"
+        app:layout_constraintBottom_toBottomOf="@id/btnNao"
+        app:layout_constraintLeft_toRightOf="@id/imgStickFallen"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+    <TextView
+        android:id="@+id/txtBotaoNao"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/alertaqueda_btn_resposta_n"
+        android:textColor="@color/colorTextAlertQueda"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/imgBad"
+        android:layout_marginTop="5dp"
+        android:textStyle="bold"
+        android:textAllCaps="true"
+        android:textSize="20sp"/>
+
+    <TextView
+        android:id="@+id/txtDescricaoNao"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/alertaqueda_descriptionBtns"
+        android:textColor="@color/colorTextAlertQueda"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txtBotaoNao"
+        android:textAllCaps="true"
+        android:textSize="12sp"/>
+
+    <TextView
+        android:id="@+id/txtCronometro"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btnSim"
+        android:layout_marginTop="5dp" />
+</android.support.constraint.ConstraintLayout>

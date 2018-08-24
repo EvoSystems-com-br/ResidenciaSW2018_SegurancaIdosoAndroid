@@ -1,0 +1,71 @@
+<resources>
+    <string name="app_name">Detector de queda</string>
+
+    <!-- MainActivity -->
+    <string name="main_btn_iniciardeteccao">Iniciar Detecção de Queda!</string>
+
+    <!-- DetectorActivity -->
+    <string name="detector_txt_informativo">Algoritmo de detecção de quedas em andamento&#8230;</string>
+
+    <!-- AlertaQuedaActivity -->
+    <string name="alertaqueda_txt_informativo">Foi detectada uma queda durante o processo!</string>
+    <string name="alertaqueda_txt_pergunta">Está tudo bem?</string>
+    <string name="alertaqueda_btn_resposta_s">Estou bem</string>
+    <string name="alertaqueda_btn_resposta_n">Não estou bem</string>
+    <string name="alertaqueda_descriptionImage_icons">Icone de resposta</string>
+    <string name="alertaqueda_descriptionImage_background">Background do botão</string>
+    <string name="alertaqueda_descriptionBtns">(Mantenha pressionado)</string>
+
+    <!-- CadastroGeralActivity -->
+    <string name="cadastro_geral_txt_titulo">Ficha médica</string>
+    <string name="cadastro_geral_btn_proximo">Próximo</string>
+    <string name="cadastro_geral_txt_nome">Nome:</string>
+    <string name="cadastro_geral_txt_data_nascimento">Data de nascimento:</string>
+    <string name="cadastro_geral_txt_grupo_sanguineo">Grupo sanguíneo:</string>
+    <string name="cadastro_geral_txt_altura">Altura:</string>
+    <string name="cadastro_geral_txt_peso">Peso:</string>
+    <string name="cadastro_geral_txt_titulo_endereco">Endereço</string>
+    <string name="cadastro_geral_txt_logradouro">Logradouro:</string>
+    <string name="cadastro_geral_txt_numero">Numero:</string>
+    <string name="cadastro_geral_txt_cep">Cep:</string>
+    <string name="cadastro_geral_txt_bairro">Bairro:</string>
+    <string name="cadastro_geral_txt_cidade">Cidade:</string>
+    <string name="cadastro_geral_txt_estado">Estado:</string>
+    <string name="cadastro_geral_txt_complemento">Complemento:</string>
+    <string name="cadastro_geral_txt_alert_campos">É necessário preencher todos os campos!</string>
+
+    <!-- CadastroAlergiaActivity -->
+    <string name="cadastro_alergia_txt_titulo">Alergias</string>
+    <string name="cadastro_alergia_btn_proximo">Próximo</string>
+    <string name="cadastro_alergia_descriptionImage_btn">Botão</string>
+
+    <!-- CadastroMedicamentoActivity -->
+    <string name="cadastro_medicamento_txt_titulo">Medicamentos</string>
+    <string name="cadastro_medicamento_btn_proximo">Próximo</string>
+    <string name="cadastro_medicamento_descriptionImage_btn">Botão</string>
+
+    <!-- CadastroContatoEmergenciaActivity -->
+    <string name="cadastro_contato_emergencia_txt_titulo">Contatos de emergência</string>
+    <string name="cadastro_contato_emergencia_btn_finalizar">Finalizar</string>
+    <string name="cadastro_contato_emergencia_descriptionImage_btn">Botão</string>
+    <string name="cadastro_contato_emergencia_txt_nome">Nome:</string>
+    <string name="cadastro_contato_emergencia_txt_numero">Número:</string>
+    <string name="cadastro_contato_emergencia_txt_parentesco">Parentesco:</string>
+    <string name="cadastro_contato_emergencia_txt_alert_minimo">Precisa cadastrar ao menos um Contato de Emergência!</string>
+    <string name="cadastro_contato_emergencia_txt_alert_campos">É necessário preencher todos os campos!</string>
+
+    <!-- FichaMedicaActivity -->
+    <string name="ficha_medica_descriptionImage_icon">Icone de alerta</string>
+    <string name="ficha_medica_txt_titulo">Preciso de Ajuda</string>
+    <string name="ficha_medica_txt_grupo_sanguineo">Grupo Sangúineo:</string>
+    <string name="ficha_medica_txt_quilo">kg</string>
+    <string name="ficha_medica_txt_centimetro">m</string>
+    <string name="ficha_medica_txt_titulo_alergias">Alergías e Reações</string>
+    <string name="ficha_medica_txt_titulo_medicamentos">Medicamentos</string>
+    <string name="ficha_medica_txt_titulo_contatos">Contatos de emergência</string>
+
+    <!-- ContatosEmergenciaListviewAdapter -->
+    <string name="listview_adapter_contato_emergencia_txt_nome">Nome:</string>
+    <string name="listview_adapter_contato_emergencia_txt_numero">Número:</string>
+    <string name="listview_adapter_contato_emergencia_txt_parentesco">Parentesco:</string>
+</resources>

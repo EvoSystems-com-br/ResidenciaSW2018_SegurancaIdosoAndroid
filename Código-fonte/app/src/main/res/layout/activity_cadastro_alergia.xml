@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingEnd="10dp"
+    android:paddingStart="10dp"
+    tools:context=".activities.CadastroAlergiaActivity">
+
+    <TextView
+        android:id="@+id/txtTituloAlergias"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/cadastro_alergia_txt_titulo"
+        android:textSize="20sp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:labelFor="@+id/edtDescricaoAlergia"/>
+
+    <EditText
+        android:id="@+id/edtDescricaoAlergia"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:maxLength="150"
+        android:textSize="15sp"
+        app:layout_constraintTop_toBottomOf="@id/txtTituloAlergias"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/btnAddAlergia"
+        android:inputType="text"/>
+
+    <ImageButton
+        android:id="@+id/btnAddAlergia"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@android:drawable/ic_input_add"
+        android:contentDescription="@string/cadastro_alergia_descriptionImage_btn"
+        app:layout_constraintTop_toBottomOf="@id/txtTituloAlergias"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <ListView
+        android:id="@+id/ltvAlergias"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:listitem="@layout/listview_alergias_adapter"
+        app:layout_constraintTop_toBottomOf="@id/btnAddAlergia"/>
+
+    <Button
+        android:id="@+id/btnProximo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/cadastro_alergia_btn_proximo"
+        app:layout_constraintTop_toBottomOf="@id/ltvAlergias"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingEnd="10dp"
+    android:paddingStart="10dp"
+    tools:context=".activities.CadastroContatoEmergenciaActivity">
+
+    <TextView
+        android:id="@+id/txtTitulo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:text="@string/cadastro_contato_emergencia_txt_titulo"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <TextView
+        android:id="@+id/txtAlerta"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:textColor="@color/colorTextAlertCadastroContatoEmergencia"
+        android:textSize="15sp"
+        app:layout_constraintTop_toBottomOf="@id/txtTitulo"/>
+
+    <TextView
+        android:id="@+id/txtNome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="5dp"
+        android:text="@string/cadastro_contato_emergencia_txt_nome"
+        android:textSize="15sp"
+        android:labelFor="@+id/edtNome"
+        app:layout_constraintTop_toBottomOf="@id/txtAlerta"
+        app:layout_constraintBaseline_toBaselineOf="@id/edtNome"/>
+
+    <EditText
+        android:id="@+id/edtNome"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:maxLength="150"
+        android:textSize="15sp"
+        android:inputType="textPersonName"
+        app:layout_constraintTop_toBottomOf="@id/txtAlerta"
+        app:layout_constraintStart_toEndOf="@id/txtParentesco"
+        app:layout_constraintEnd_toStartOf="@id/btnAddContatoEmergencia"/>
+
+    <TextView
+        android:id="@+id/txtNumero"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="5dp"
+        android:text="@string/cadastro_contato_emergencia_txt_numero"
+        android:textSize="15sp"
+        android:labelFor="@+id/edtNumero"
+        app:layout_constraintTop_toBottomOf="@id/txtNome"
+        app:layout_constraintBaseline_toBaselineOf="@id/edtNumero"/>
+
+    <com.vicmikhailau.maskededittext.MaskedEditText
+        android:id="@+id/edtNumero"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:maxLength="16"
+        app:mask="(##) # ####-####"
+        android:textSize="15sp"
+        app:layout_constraintTop_toBottomOf="@id/txtNome"
+        app:layout_constraintStart_toEndOf="@id/txtParentesco"
+        app:layout_constraintEnd_toStartOf="@id/btnAddContatoEmergencia"/>
+
+    <TextView
+        android:id="@+id/txtParentesco"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="5dp"
+        android:text="@string/cadastro_contato_emergencia_txt_parentesco"
+        android:textSize="15sp"
+        android:labelFor="@+id/edtParentesco"
+        app:layout_constraintTop_toBottomOf="@id/txtNumero"
+        app:layout_constraintBaseline_toBaselineOf="@id/edtParentesco"/>
+
+    <EditText
+        android:id="@+id/edtParentesco"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:maxLength="50"
+        android:textSize="15sp"
+        android:inputType="text"
+        app:layout_constraintTop_toBottomOf="@id/txtNumero"
+        app:layout_constraintStart_toEndOf="@id/txtParentesco"
+        app:layout_constraintEnd_toStartOf="@id/btnAddContatoEmergencia"/>
+
+    <ImageButton
+        android:id="@+id/btnAddContatoEmergencia"
+        android:layout_width="50dp"
+        android:layout_height="0dp"
+        android:contentDescription="@string/cadastro_contato_emergencia_descriptionImage_btn"
+        android:src="@android:drawable/ic_input_add"
+        app:layout_constraintTop_toBottomOf="@id/txtAlerta"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/ltvContatosEmergencia" />
+
+    <ListView
+        android:id="@+id/ltvContatosEmergencia"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:listitem="@layout/listview_contatos_emergencia_adapter"
+        app:layout_constraintTop_toBottomOf="@id/edtParentesco"/>
+
+    <Button
+        android:id="@+id/btnFinalizar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/cadastro_contato_emergencia_btn_finalizar"
+        app:layout_constraintTop_toBottomOf="@id/ltvContatosEmergencia"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+</android.support.constraint.ConstraintLayout>
