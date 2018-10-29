@@ -1,5 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <!-- ThemeCustom -->
+    <color name="primaryColor">#263238</color>
+    <color name="primaryLightColor">#4f5b62</color>
+    <color name="primaryDarkColor">#000a12</color>
+    <color name="primaryTextColor">#dfdfdf</color>
+    <color name="primaryHintTextColor">#b4b4b4</color>
+    <color name="primaryAccentColor">#00695c</color>
+
+    <color name="secondaryColor">#eceff1</color>
+    <color name="secondaryLightColor">#ffffff</color>
+    <color name="secondaryDarkColor">#babdbe</color>
+    <color name="secondaryTextColor">#000000</color>
+    <color name="secondaryAccentColor">#00695c</color>
+
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>

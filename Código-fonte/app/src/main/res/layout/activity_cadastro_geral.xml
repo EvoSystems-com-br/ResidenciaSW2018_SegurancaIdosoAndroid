@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".activities.CadastroAlergiaActivity">
@@ -10,17 +10,17 @@
         android:id="@+id/Constraint"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:paddingEnd="10dp"
-        android:paddingStart="10dp">
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp">
 
         <TextView
             android:id="@+id/txtTitulo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/cadastro_geral_txt_titulo"
-            android:textSize="0sp"
+            android:textSize="20sp"
             app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"/>
+            app:layout_constraintRight_toRightOf="parent" />
 
         <TextView
             android:id="@+id/txtAlerta"
@@ -29,62 +29,74 @@
             android:textAlignment="center"
             android:textColor="@color/colorTextAlertGeralEmergencia"
             android:textSize="15sp"
-            app:layout_constraintTop_toBottomOf="@id/txtTitulo"/>
-
-        <TextView
-            android:id="@+id/txtNome"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="5dp"
-            android:text="@string/cadastro_geral_txt_nome"
-            android:textSize="15sp"
-            android:labelFor="@+id/edtNome"
-            app:layout_constraintTop_toBottomOf="@id/txtAlerta"
-            app:layout_constraintBaseline_toBaselineOf="@id/edtNome"/>
+            app:layout_constraintTop_toBottomOf="@id/txtTitulo" />
 
         <EditText
             android:id="@+id/edtNome"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            android:hint="@string/cadastro_geral_txt_hint_nome"
+            android:inputType="textPersonName"
             android:maxLength="150"
             android:textSize="15sp"
-            android:inputType="textPersonName"
-            app:layout_constraintTop_toBottomOf="@id/txtAlerta"
-            app:layout_constraintStart_toEndOf="@id/txtDataNascimento"
-            app:layout_constraintEnd_toEndOf="parent"/>
+            app:layout_constraintEnd_toStartOf="@id/edtSobrenome"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/txtAlerta" />
 
-        <TextView
-            android:id="@+id/txtDataNascimento"
-            android:layout_width="wrap_content"
+        <EditText
+            android:id="@+id/edtSobrenome"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="5dp"
-            android:text="@string/cadastro_geral_txt_data_nascimento"
+            android:layout_marginStart="10dp"
+            android:hint="@string/cadastro_geral_txt_hint_sobrenome"
+            android:inputType="textPersonName"
+            android:maxLength="150"
             android:textSize="15sp"
-            android:labelFor="@+id/edtDataNascimento"
-            app:layout_constraintTop_toBottomOf="@id/edtNome"
-            app:layout_constraintBaseline_toBaselineOf="@id/edtDataNascimento"/>
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/edtNome"
+            app:layout_constraintTop_toBottomOf="@id/txtAlerta" />
 
         <com.vicmikhailau.maskededittext.MaskedEditText
             android:id="@+id/edtDataNascimento"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:hint="@string/cadastro_geral_txt_hint_data_nascimento"
             android:inputType="number"
-            app:mask="##/##/####"
             android:maxLength="10"
             android:textSize="15sp"
-            app:layout_constraintTop_toBottomOf="@id/txtNome"
-            app:layout_constraintStart_toEndOf="@id/txtDataNascimento"
-            app:layout_constraintEnd_toEndOf="parent"/>
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/edtSobrenome"
+            app:mask="##/##/####" />
 
-        <TextView
-            android:id="@+id/txtGrupoSanguineo"
-            android:layout_width="wrap_content"
+        <com.vicmikhailau.maskededittext.MaskedEditText
+            android:id="@+id/edtAltura"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="5dp"
-            android:text="@string/cadastro_geral_txt_grupo_sanguineo"
+            android:layout_marginEnd="10dp"
+            android:hint="@string/cadastro_geral_txt_hint_altura"
+            android:inputType="number"
+            android:maxLength="5"
             android:textSize="15sp"
-            android:layout_weight="1"
-            app:layout_constraintTop_toBottomOf="@id/edtDataNascimento" />
+            app:layout_constraintEnd_toStartOf="@id/edtPeso"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/edtDataNascimento"
+            app:mask="#.##" />
+
+        <com.vicmikhailau.maskededittext.MaskedEditText
+            android:id="@+id/edtPeso"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:hint="@string/cadastro_geral_txt_hint_peso"
+            android:inputType="number"
+            android:maxLength="5"
+            android:textSize="15sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/edtAltura"
+            app:layout_constraintTop_toBottomOf="@id/edtDataNascimento"
+            app:mask="##.##" />
 
         <Spinner
             android:id="@+id/spnGrupoSanguineo"
@@ -92,54 +104,9 @@
             android:layout_height="wrap_content"
             android:maxLength="3"
             android:textSize="15sp"
-            app:layout_constraintTop_toBottomOf="@id/txtDataNascimento"
-            app:layout_constraintStart_toEndOf="@id/txtDataNascimento"
-            app:layout_constraintEnd_toEndOf="parent"/>
-
-        <TextView
-            android:id="@+id/txtAltura"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="5dp"
-            android:text="@string/cadastro_geral_txt_altura"
-            android:textSize="15sp"
-            app:layout_constraintTop_toBottomOf="@id/txtGrupoSanguineo"
-            app:layout_constraintBaseline_toBaselineOf="@id/edtAltura"/>
-
-        <com.vicmikhailau.maskededittext.MaskedEditText
-            android:id="@+id/edtAltura"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:inputType="number"
-            app:mask="#.##"
-            android:maxLength="5"
-            android:textSize="15sp"
-            app:layout_constraintTop_toBottomOf="@id/txtGrupoSanguineo"
-            app:layout_constraintStart_toEndOf="@id/txtAltura"
-            app:layout_constraintEnd_toEndOf="parent"/>
-
-        <TextView
-            android:id="@+id/txtPeso"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="5dp"
-            android:text="@string/cadastro_geral_txt_peso"
-            android:textSize="15sp"
-            app:layout_constraintTop_toBottomOf="@id/txtAltura"
-            app:layout_constraintBaseline_toBaselineOf="@id/edtPeso"/>
-
-        <com.vicmikhailau.maskededittext.MaskedEditText
-            android:id="@+id/edtPeso"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:inputType="number"
-            app:mask="##.##"
-            android:maxLength="5"
-            android:textSize="15sp"
-            app:layout_constraintTop_toBottomOf="@id/txtAltura"
-            app:layout_constraintStart_toEndOf="@id/txtAltura"
-            app:layout_constraintEnd_toEndOf="parent"/>
-
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/edtPeso" />
 
         <TextView
             android:id="@+id/txtEndereco"
@@ -149,167 +116,106 @@
             android:layout_marginBottom="10dp"
             android:text="@string/cadastro_geral_txt_titulo_endereco"
             android:textSize="20sp"
-            app:layout_constraintTop_toBottomOf="@id/edtPeso" />
-
-        <TextView
-            android:id="@+id/txtLogradouro"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="5dp"
-            android:text="@string/cadastro_geral_txt_logradouro"
-            android:labelFor="@+id/edtLogradouro"
-            android:textSize="15sp"
-            app:layout_constraintTop_toBottomOf="@id/txtEndereco"
-            app:layout_constraintBaseline_toBaselineOf="@id/edtLogradouro"/>
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/spnGrupoSanguineo" />
 
         <EditText
             android:id="@+id/edtLogradouro"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:hint="@string/cadastro_geral_txt_hint_logradouro"
+            android:inputType="text"
             android:maxLength="150"
             android:textSize="15sp"
-            android:inputType="text"
-            app:layout_constraintTop_toBottomOf="@id/txtEndereco"
-            app:layout_constraintStart_toEndOf="@id/txtComplemento"
-            app:layout_constraintEnd_toEndOf="parent"/>
-
-        <TextView
-            android:id="@+id/txtNumero"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="5dp"
-            android:text="@string/cadastro_geral_txt_numero"
-            android:labelFor="@+id/edtNumero"
-            android:textSize="15sp"
-            app:layout_constraintTop_toBottomOf="@id/txtLogradouro"
-            app:layout_constraintBaseline_toBaselineOf="@id/edtNumero"/>
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/txtEndereco" />
 
         <EditText
             android:id="@+id/edtNumero"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            android:hint="@string/cadastro_geral_txt_hint_numero"
+            android:inputType="text"
             android:maxLength="15"
             android:textSize="15sp"
-            android:inputType="text"
-            app:layout_constraintTop_toBottomOf="@id/txtLogradouro"
-            app:layout_constraintStart_toEndOf="@id/txtComplemento"
-            app:layout_constraintEnd_toEndOf="parent"/>
-
-        <TextView
-            android:id="@+id/txtCep"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="5dp"
-            android:text="@string/cadastro_geral_txt_cep"
-            android:textSize="15sp"
-            app:layout_constraintTop_toBottomOf="@id/txtNumero"
-            app:layout_constraintBaseline_toBaselineOf="@id/edtCep"/>
+            app:layout_constraintEnd_toStartOf="@id/edtCep"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/edtLogradouro" />
 
         <com.vicmikhailau.maskededittext.MaskedEditText
             android:id="@+id/edtCep"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:hint="@string/cadastro_geral_txt_hint_cep"
             android:inputType="number"
-            app:mask="#####-###"
             android:maxLength="9"
             android:textSize="15sp"
-            app:layout_constraintTop_toBottomOf="@id/txtNumero"
-            app:layout_constraintStart_toEndOf="@id/txtComplemento"
-            app:layout_constraintEnd_toEndOf="parent"/>
-
-        <TextView
-            android:id="@+id/txtBairro"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="5dp"
-            android:text="@string/cadastro_geral_txt_bairro"
-            android:labelFor="@+id/edtBairro"
-            android:textSize="15sp"
-            app:layout_constraintTop_toBottomOf="@id/txtCep"
-            app:layout_constraintBaseline_toBaselineOf="@id/edtBairro"/>
-
-        <EditText
-            android:id="@+id/edtBairro"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:maxLength="100"
-            android:textSize="15sp"
-            android:inputType="text"
-            app:layout_constraintTop_toBottomOf="@id/txtCep"
-            app:layout_constraintStart_toEndOf="@id/txtComplemento"
-            app:layout_constraintEnd_toEndOf="parent"/>
-
-        <TextView
-            android:id="@+id/txtCidade"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="5dp"
-            android:text="@string/cadastro_geral_txt_cidade"
-            android:labelFor="@+id/edtCidade"
-            android:textSize="15sp"
-            app:layout_constraintTop_toBottomOf="@id/txtBairro"
-            app:layout_constraintBaseline_toBaselineOf="@id/edtCidade"/>
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/edtNumero"
+            app:layout_constraintTop_toBottomOf="@id/edtLogradouro"
+            app:mask="#####-###" />
 
         <EditText
             android:id="@+id/edtCidade"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            android:hint="@string/cadastro_geral_txt_hint_cidade"
+            android:inputType="text"
             android:maxLength="100"
             android:textSize="15sp"
-            android:inputType="text"
-            app:layout_constraintTop_toBottomOf="@id/txtBairro"
-            app:layout_constraintStart_toEndOf="@id/txtComplemento"
-            app:layout_constraintEnd_toEndOf="parent"/>
-
-        <TextView
-            android:id="@+id/txtEstado"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="5dp"
-            android:text="@string/cadastro_geral_txt_estado"
-            android:textSize="15sp"
-            app:layout_constraintTop_toBottomOf="@id/edtCidade" />
+            app:layout_constraintEnd_toStartOf="@id/spnEstado"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/edtNumero" />
 
         <Spinner
             android:id="@+id/spnEstado"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
             android:maxLength="100"
             android:textSize="15sp"
-            app:layout_constraintTop_toBottomOf="@id/txtCidade"
-            app:layout_constraintStart_toEndOf="@id/txtComplemento"
-            app:layout_constraintEnd_toEndOf="parent"/>
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/edtCidade"
+            app:layout_constraintTop_toBottomOf="@id/edtCep" />
 
-        <TextView
-            android:id="@+id/txtComplemento"
-            android:layout_width="wrap_content"
+        <EditText
+            android:id="@+id/edtBairro"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="5dp"
-            android:text="@string/cadastro_geral_txt_complemento"
-            android:labelFor="@+id/edtComplemento"
+            android:hint="@string/cadastro_geral_txt_hint_bairro"
+            android:inputType="text"
+            android:maxLength="100"
             android:textSize="15sp"
-            app:layout_constraintTop_toBottomOf="@id/txtEstado"
-            app:layout_constraintBaseline_toBaselineOf="@id/edtComplemento"/>
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/spnEstado" />
 
         <EditText
             android:id="@+id/edtComplemento"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:hint="@string/cadastro_geral_txt_hint_complemento"
+            android:inputType="text"
             android:maxLength="50"
             android:textSize="15sp"
-            android:inputType="text"
-            app:layout_constraintTop_toBottomOf="@id/txtEstado"
-            app:layout_constraintStart_toEndOf="@id/txtComplemento"
-            app:layout_constraintEnd_toEndOf="parent"/>
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/edtBairro" />
 
         <Button
             android:id="@+id/btnProximo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/cadastro_geral_btn_proximo"
             android:layout_gravity="center"
-            app:layout_constraintTop_toBottomOf="@id/edtComplemento"
+            android:layout_marginTop="10dp"
+            android:text="@string/cadastro_geral_btn_proximo"
             app:layout_constraintLeft_toRightOf="parent"
-            app:layout_constraintRight_toLeftOf="parent"/>
+            app:layout_constraintRight_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/edtComplemento" />
     </android.support.constraint.ConstraintLayout>
 </ScrollView>

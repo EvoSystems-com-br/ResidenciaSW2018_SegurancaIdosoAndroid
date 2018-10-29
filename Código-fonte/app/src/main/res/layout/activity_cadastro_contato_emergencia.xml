@@ -28,17 +28,6 @@
         android:textSize="15sp"
         app:layout_constraintTop_toBottomOf="@id/txtTitulo"/>
 
-    <TextView
-        android:id="@+id/txtNome"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="5dp"
-        android:text="@string/cadastro_contato_emergencia_txt_nome"
-        android:textSize="15sp"
-        android:labelFor="@+id/edtNome"
-        app:layout_constraintTop_toBottomOf="@id/txtAlerta"
-        app:layout_constraintBaseline_toBaselineOf="@id/edtNome"/>
-
     <EditText
         android:id="@+id/edtNome"
         android:layout_width="0dp"
@@ -46,20 +35,10 @@
         android:maxLength="150"
         android:textSize="15sp"
         android:inputType="textPersonName"
+        android:hint="@string/cadastro_contato_emergencia_txt_hint_nome"
         app:layout_constraintTop_toBottomOf="@id/txtAlerta"
-        app:layout_constraintStart_toEndOf="@id/txtParentesco"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toStartOf="@id/btnAddContatoEmergencia"/>
-
-    <TextView
-        android:id="@+id/txtNumero"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="5dp"
-        android:text="@string/cadastro_contato_emergencia_txt_numero"
-        android:textSize="15sp"
-        android:labelFor="@+id/edtNumero"
-        app:layout_constraintTop_toBottomOf="@id/txtNome"
-        app:layout_constraintBaseline_toBaselineOf="@id/edtNumero"/>
 
     <com.vicmikhailau.maskededittext.MaskedEditText
         android:id="@+id/edtNumero"
@@ -69,20 +48,10 @@
         android:maxLength="16"
         app:mask="(##) # ####-####"
         android:textSize="15sp"
-        app:layout_constraintTop_toBottomOf="@id/txtNome"
-        app:layout_constraintStart_toEndOf="@id/txtParentesco"
+        android:hint="@string/cadastro_contato_emergencia_txt_hint_numero"
+        app:layout_constraintTop_toBottomOf="@id/edtNome"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toStartOf="@id/btnAddContatoEmergencia"/>
-
-    <TextView
-        android:id="@+id/txtParentesco"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="5dp"
-        android:text="@string/cadastro_contato_emergencia_txt_parentesco"
-        android:textSize="15sp"
-        android:labelFor="@+id/edtParentesco"
-        app:layout_constraintTop_toBottomOf="@id/txtNumero"
-        app:layout_constraintBaseline_toBaselineOf="@id/edtParentesco"/>
 
     <EditText
         android:id="@+id/edtParentesco"
@@ -91,8 +60,9 @@
         android:maxLength="50"
         android:textSize="15sp"
         android:inputType="text"
-        app:layout_constraintTop_toBottomOf="@id/txtNumero"
-        app:layout_constraintStart_toEndOf="@id/txtParentesco"
+        android:hint="@string/cadastro_contato_emergencia_txt_hint_parentesco"
+        app:layout_constraintTop_toBottomOf="@id/edtNumero"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toStartOf="@id/btnAddContatoEmergencia"/>
 
     <ImageButton
@@ -103,19 +73,30 @@
         android:src="@android:drawable/ic_input_add"
         app:layout_constraintTop_toBottomOf="@id/txtAlerta"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toTopOf="@id/ltvContatosEmergencia" />
+        app:layout_constraintBottom_toTopOf="@id/txtInformativo" />
+
+    <TextView
+        android:id="@+id/txtInformativo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/cadastro_contato_emergencia_txt_informativo"
+        android:visibility="invisible"
+        android:textColor="@color/primaryHintTextColor"
+        app:layout_constraintTop_toBottomOf="@+id/edtParentesco"/>
 
     <ListView
         android:id="@+id/ltvContatosEmergencia"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        tools:listitem="@layout/listview_contatos_emergencia_adapter"
-        app:layout_constraintTop_toBottomOf="@id/edtParentesco"/>
+        android:layout_marginTop="10dp"
+        tools:listitem="@layout/item_cadastro_contato_emergencia"
+        app:layout_constraintTop_toBottomOf="@id/txtInformativo"/>
 
     <Button
         android:id="@+id/btnFinalizar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
         android:text="@string/cadastro_contato_emergencia_btn_finalizar"
         app:layout_constraintTop_toBottomOf="@id/ltvContatosEmergencia"
         app:layout_constraintStart_toStartOf="parent"

@@ -1,15 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.ifsp.detectorqueda">
+    package="br.edu.ifsp.monitoramento">
 
-    <!-- Permissões -->
+    <!-- PERMISSÕES -->
 
     <!-- Vibração do Smartphone -->
     <uses-permission android:name="android.permission.VIBRATE"/>
     <!-- Envio de mensagens -->
     <uses-permission android:name="android.permission.SEND_SMS"/>
 
+    <!-- Localização do Smartphone -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+
     <application
+        android:name=".App"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -25,17 +30,6 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity>
-
-        <!-- DetectorActivity -->
-        <activity
-            android:name=".activities.DetectorActivity"
-            android:parentActivityName=".activities.MainActivity">
-
-            <!-- Meta-tag necessária para suportar api level 15 ou menor -->
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value=".activities.MainActivity" />
         </activity>
 
         <!-- AlertaQuedaActivity -->
@@ -90,6 +84,15 @@
         <!-- EnvioMensagemWhatsAppService -->
         <service android:name=".services.EnvioMensagemWhatsappService"
             android:exported="false"/>
+
+        <!-- LocalizacaoService -->
+        <service android:name=".services.LocalizacaoService"
+            android:exported="false"/>
+
+        <!-- Configurações Google Maps API-->
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/API_KEY"/>
     </application>
 
 </manifest>
