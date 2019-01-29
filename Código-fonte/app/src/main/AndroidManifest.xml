@@ -1,17 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="br.edu.ifsp.monitoramento">
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.scopus.ifsp.projetofinalteste">
 
     <!-- PERMISSÕES -->
 
     <!-- Vibração do Smartphone -->
-    <uses-permission android:name="android.permission.VIBRATE"/>
+    <uses-permission android:name="android.permission.VIBRATE" />
     <!-- Envio de mensagens -->
-    <uses-permission android:name="android.permission.SEND_SMS"/>
+    <uses-permission android:name="android.permission.SEND_SMS" />
 
     <!-- Localização do Smartphone -->
-    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
-    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
 
     <application
         android:name=".App"
@@ -20,11 +23,15 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
+        android:theme="@style/AppTheme"
+        tools:ignore="GoogleAppIndexingWarning">
 
         <!-- ACTIVITIES -->
-        <!-- MainActivity -->
-        <activity android:name=".activities.MainActivity">
+        <!-- SplashActivity -->
+        <activity
+            android:name=".activity.SplashActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.TelaCheia">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -32,67 +39,100 @@
             </intent-filter>
         </activity>
 
-        <!-- AlertaQuedaActivity -->
-        <activity android:name=".activities.AlertaQuedaActivity">
-        </activity>
-
-        <!-- FichaMedicaActivity -->
-        <activity android:name=".activities.FichaMedicaActivity">
-        </activity>
-
-        <!-- CadastroGeralActivity -->
-        <activity android:name=".activities.CadastroGeralActivity">
-        </activity>
-
-        <!-- CadastroAlergiaActivity -->
-        <activity android:name=".activities.CadastroAlergiaActivity"
-            android:parentActivityName=".activities.CadastroGeralActivity">
+        <!-- MapaActivity -->
+        <activity
+            android:name=".activity.MapaActivity"
+            android:parentActivityName=".activity.MainActivity"
+            android:screenOrientation="portrait">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".activities.CadastroGeralActivity" />
+                android:value=".activity.MainActivity" />
+        </activity>
+
+        <!-- AlertaQuedaActivity -->
+        <activity
+            android:name=".activity.AlertaQuedaActivity"
+            android:screenOrientation="portrait"></activity>
+
+        <!-- FichaMedicaActivity -->
+        <activity
+            android:name=".activity.FichaMedicaActivity"
+            android:screenOrientation="portrait"></activity>
+
+        <!-- CadastroGeralActivity -->
+        <activity
+            android:name=".activity.CadastroGeralActivity"
+            android:screenOrientation="portrait"></activity>
+
+        <!-- CadastroAlergiaActivity -->
+        <activity
+            android:name=".activity.CadastroAlergiaActivity"
+            android:parentActivityName=".activity.CadastroGeralActivity"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".activity.CadastroGeralActivity" />
         </activity>
 
         <!-- CadastroMedicamentoActivity -->
-        <activity android:name=".activities.CadastroMedicamentoActivity"
-            android:parentActivityName=".activities.CadastroAlergiaActivity">
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value=".activities.CadastroAlergiaActivity" />
-        </activity>
 
         <!-- CadastroContatoEmergenciaActivity -->
-        <activity android:name=".activities.CadastroContatoEmergenciaActivity"
-            android:parentActivityName=".activities.CadastroMedicamentoActivity">
+        <activity
+            android:name=".activity.CadastroContatoEmergenciaActivity"
+            android:parentActivityName=".activity.CadastroAlergiaActivity"
+            android:screenOrientation="portrait">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".activities.CadastroMedicamentoActivity" />
+                android:value=".activity.CadastroAlergiaActivity" />
         </activity>
+
+        <activity android:name=".activity.MainActivity"
+            android:screenOrientation="portrait" />
+
+        <activity android:name=".activity.AlarmActivity"
+            android:screenOrientation="portrait" />
+
+        <activity android:name=".activity.AddReminderActivity"
+            android:screenOrientation="portrait"/>
+
+        <activity android:name=".activity.InfoRemedioActivity"
+            android:screenOrientation="portrait"/>
+
+        <activity android:name=".activity.AlarmListaCompletaActivity"
+            android:screenOrientation="portrait" />
 
         <!-- SERVICES -->
         <!-- DetectorQuedaService -->
-        <service android:name=".services.DetectorQuedaService"
-            android:exported="false"/>
+        <service
+            android:name=".service.DetectorQuedaService"
+            android:exported="false" />
 
         <!-- AlertaService -->
-        <service android:name=".services.AlertaService"
-            android:exported="false"/>
+        <service
+            android:name=".service.AlertaService"
+            android:exported="false" />
 
         <!-- EnvioMensagemService -->
-        <service android:name=".services.EnvioMensagemService"
-            android:exported="false"/>
+        <service
+            android:name=".service.EnvioMensagemService"
+            android:exported="false" />
 
         <!-- EnvioMensagemWhatsAppService -->
-        <service android:name=".services.EnvioMensagemWhatsappService"
-            android:exported="false"/>
+        <service
+            android:name=".service.EnvioMensagemWhatsappService"
+            android:exported="false" />
 
         <!-- LocalizacaoService -->
-        <service android:name=".services.LocalizacaoService"
-            android:exported="false"/>
+        <service
+            android:name=".service.LocalizacaoService"
+            android:exported="false" />
 
         <!-- Configurações Google Maps API-->
         <meta-data
             android:name="com.google.android.geo.API_KEY"
-            android:value="@string/API_KEY"/>
+            android:value="@string/API_KEY" />
+
+        <receiver android:name=".service.AlarmReceiver" />
     </application>
 
 </manifest>

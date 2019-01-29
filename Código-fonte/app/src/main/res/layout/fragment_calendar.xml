@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/Branco"
+    tools:context="fragment.calendarFragment">
+
+    <com.applandeo.materialcalendarview.CalendarView xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/calendarView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="10dp"
+        app:abbreviationsBarColor="@color/BlueSky"
+        app:datePicker="true"
+        app:daysLabelsColor="@color/Preto"
+        app:headerColor="@color/BlueSky"
+        app:pagesColor="@color/Branco"
+        app:selectionColor="@color/Azul"
+        app:selectionLabelColor="@color/Branco"/>
+
+ </RelativeLayout>

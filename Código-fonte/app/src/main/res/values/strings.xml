@@ -1,5 +1,153 @@
 <resources>
-    <string name="app_name">Monitoramento</string>
+    <string name="app_name">Mais Saúde</string>
+
+    <!--Descrição de Imagem-->
+    <string name="thumbnail_image_description">thumbnail_image</string>
+    <string name="ic_notification_description">ic_notification</string>
+    <string name="ic_delete_red"> Deletar Remedio </string>
+
+    <!-- content_cadastroremedio -->
+    <string name="txtTitulo">AGENDAR NOVO REMÉDIO</string> <!--Título-->
+    <string name="btcontinua_modum">Continuar</string> <!--Texto Botão - Modo Um-->
+    <string name="form_btCancelar"><u>Cancelar</u></string> <!-- Texto botão cancelar-->
+    <string name="periodo">Selecionar periodo</string> <!-- Título Spinner-->
+    <string-array name="frequencia"> <!--Conteúdo Spinner-->
+        <item>Ano</item>
+        <item>Mês</item>
+        <item>Semana</item>
+        <item>Dia</item>
+        <item>Horas</item>
+        <item>Minutos</item>
+    </string-array>
+    <string name="form_lblNome">Nome:</string> <!-- Label Nome do remédio -->
+    <string name="form_lblQtd">Quantidade:</string> <!-- Label Quantidade -->
+    <string name="form_lblFreq">Frequência:</string> <!-- Label Frequencia -->
+    <string name="txtQuantidade">Quantidade</string> <!-- TextView quantidade -->
+    <string name="txtNomeRemedio">Remédio</string> <!-- TextView Nome do Remédio -->
+    <string name="txtData">Data: </string> <!-- TextView Data de inscrição da receita -->
+    <string name="txtCpf">CPF/CNPJ: </string> <!-- TextView CPF -->
+    <string name="txtRp">RP(N° de Registro Profissional): </string> <!-- TextView RP (Registro Profissional) -->
+    <string name="txtInstituicao">Instituição: </string> <!-- TextView Instituicao -->
+    <string name="txtNomeFarmaceutico">Nome do Farmaceutico: </string> <!-- TextView Nome Farmaceutico -->
+    <string name="txtOrientacaoExtra"> Orientação Extra: </string> <!-- TextView Orientação Extra -->
+    <string name="txtEndereco"> Endereço: </string>
+    <string name="txtConcentracao"> Concentração:</string>
+    <string name="txtFormaFarmaceutica"> Forma Farmaceutica: </string>
+
+    <!-- Activity Main -->
+    <string name="lblMeuCalendario"> Meu Calendário </string>
+    <string name="lblListaRemedio"> Lista de Remédios </string>
+    <string name="lblToolbar"> Bem vindo ao Mais Saúde </string>
+
+    <!-- Fragment Material Calendar -->
+    <!-- Tradução dias da semana -->
+    <string name="material_calendar_monday">Seg</string>
+    <string name="material_calendar_tuesday">Ter</string>
+    <string name="material_calendar_wednesday">Quar</string>
+    <string name="material_calendar_thursday">Qui</string>
+    <string name="material_calendar_friday">Sex</string>
+    <string name="material_calendar_saturday">Sáb</string>
+    <string name="material_calendar_sunday">Dom</string>
+
+    <!-- Tradução Meses do ano -->
+    <array name="material_calendar_months_array">
+        <item>Janeiro</item>
+        <item>Fevereiro</item>
+        <item>Março</item>
+        <item>Abril</item>
+        <item>Maio</item>
+        <item>Junho</item>
+        <item>Julho</item>
+        <item>Agosto</item>
+        <item>Setembro</item>
+        <item>Outubro</item>
+        <item>Novembro</item>
+        <item>Dezembro</item>
+    </array>
+
+    <string name="material_calendar_today_button">Hoje</string>
+    <string name="material_calendar_positive_button">OK</string>
+    <string name="material_calendar_negative_button">Cancelar</string>
+
+    <!-- content_info -->
+    <string name="txtTítuloInfo">Receita médica digital</string> <!-- Label Título -->
+    <string name="txtSubtituloMedico">Informações do Farmaceutico</string> <!-- Label Subtítulo item um -->
+    <string name="v_lblNomeFarmaceutico">Nome:</string> <!-- Label Nome Farmaceutico -->
+    <string name="v_lblInstituicao">Instituição:</string> <!-- Label Instituição -->
+    <string name="v_lblEndereco"> Endereço: </string> <!-- Label Endereço -->
+    <string name="v_lblRp">RP (N° de Registro Profissional):</string> <!-- Label RP(Registro Profissional) -->
+    <string name="v_lblData">Data de solicitação:</string> <!-- Label Data de inscrição da receita -->
+    <string name="txtsubRemedio">Informações do Remédio</string> <!-- Label Subtítulo Item dois -->
+    <string name="v_lblNomeRemedio">Nome:</string> <!-- Label Nome do Remédio -->
+    <string name="v_lblConcentracao">Concentração: </string> <!-- Label Concentração -->
+    <string name="v_lblFormaFarmaceutica">Forma farmaceutica: </string> <!-- Label Forma Farmaceutica -->
+    <string name="v_lblQuantidade">Quantidade:</string> <!-- Label Quantidade -->
+    <string name="v_lblFrequencia">Frequência:</string> <!-- Label Frequencia -->
+    <string name="v_lblOrientacaoExtra">Orientações Extras:</string> <!-- Label Orientações Extra -->
+
+    <!-- content_alarm_lista -->
+    <string name="no_remider_text"> Clique nos botões abaixos para configurar seu alarme!</string><!--Empty_View-->
+    <string name="btconcluirAlarme">CONCLUIR</string>
+    <string name="title">Title</string>
+    <string name="repeat_no_and_type">Repeat No and Type</string>
+    <string name="date_and_time">Date and Time</string>
+
+    <!-- content_alarm_cadastro -->
+    <string name="details_text">Detalhes</string><!--Details-->
+    <string name="dateInicio_text">Data de Inicio</string><!--Date-->
+    <string name="time_text">Horário</string><!--Time-->
+    <string name="dateFinal_text">Último dia</string><!--Date-->
+    <string name="repeat_text">Repetir?</string><!--Repeat-->
+    <string name="Switch_textOff">Desligado</string><!--repeat_off-->
+    <string name="repeat_no_text">Intervalo de Repetição</string><!--repeat_no-->
+    <string name="repeat_type">Tipo de repetição</string><!--OK-->
+    <string name="unsaved_changes_dialog_msg">Descartar mudanças e sair da edição?</string>
+    <string name="discard">Descartar</string>
+    <string name="keep_editing">Continuar Editando</string>
+    <string name="delete_dialog_msg">Apagar este alarm?</string>
+    <string name="delete">Apagar</string>
+    <string name="cancel">Cancelar</string>
+    <string name="editor_delete_reminder_successful">Alarme deletado com sucesso</string>
+    <string name="editor_delete_reminder_failed">Erro ao deletar alarme</string>
+    <string name="editor_insert_reminder_successful">Alarme salvo com sucesso</string>
+    <string name="editor_insert_reminder_failed">Erro ao salvar o alarme</string>
+    <string name="editor_update_reminder_successful">Alarme atualizado com sucesso</string>
+    <string name="editor_update_reminder_failed">Erro ao atualizar o alarme</string>
+
+    <!-- NotificationHelper.class -->
+    <string name="btn1_description">Start foreground service</string>
+    <string name="btn1_title">Start</string>
+    <string name="simple_service_title">Simple Service</string>
+    <string name="simple_service_desc">Simple Service from the OTest app</string>
+
+    <string name="main_create_noti2_btn">Send</string>
+
+    <string name="btnA_title">Go to Settings</string>
+    <string name="noti_channel_default">Primary Channel</string>
+    <string name="noti1_title">Notification 1 Title</string>
+    <string name="primary1_body">The content</string>
+    <string name="noti2_title">Second notification</string>
+    <string name="secondary1_body">Notification body text.</string>
+    <string name="noti_channel_second">Secondary Channel</string>
+
+    <string name="main_primary_title">Primary Channel</string>
+    <string name="main_primary_send1">Send 1</string>
+    <string name="main_primary_send2">Send 2</string>
+    <string name="main_primary_config">Go to primary settings</string>
+
+    <string name="main_secondary_title">Secondary Channel</string>
+    <string name="main_secondary_send1">Send 1</string>
+    <string name="main_secondary_send2">Send 2</string>
+    <string name="main_secondary_config">Go to secondary settings</string>
+    <string name="primary2_body">Second Notification for Primary Channel</string>
+    <string name="secondary2_body">Second Notification for Secondary Channel</string>
+
+    <!-- SplashActvity -->
+    <string name="splash_descriptionImage_background">Background da tela</string>
+    <string name="splash_descriptionImage_icone_ifsp">Icone do IFSP</string>
+    <string name="splash_descriptionImage_icone_scopus">Icone da SCOPUS</string>
+    <string name="splash_descriptionImage_icone_evo_systems">Icone da Evo Systems</string>
+    <string name="splash_txt_rodape">www.ifsp.edu.br</string>
 
     <!-- MainActivity -->
     <string name="main_alert_dialog_localizacao_txtTitulo">Para continuar, ative a localização do
