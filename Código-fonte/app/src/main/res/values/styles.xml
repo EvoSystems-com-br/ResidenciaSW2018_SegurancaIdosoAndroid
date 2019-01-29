@@ -1,20 +1,34 @@
 <resources>
+
     <!-- Base application theme. -->
-    <style name="AppTheme" parent="Theme.AppCompat">
-        <item name="colorPrimary">@color/primaryColor</item>
-        <item name="colorPrimaryDark">@color/primaryDarkColor</item>
-        <item name="colorAccent">@color/primaryAccentColor</item>
-
-        <item name="android:textColor">@color/primaryTextColor</item>
-        <item name="android:textColorHint">@color/primaryHintTextColor</item>
-        <item name="colorError">@color/primaryAccentColor</item>
-
-        <item name="buttonStyle">@style/ButtonStyle</item>
-        <item name="imageButtonStyle">@style/ButtonStyle</item>
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/DeepSkyBlue</item>
+        <item name="colorPrimaryDark">@color/Preto</item>
+        <item name="colorAccent">@color/colorAccent</item>
     </style>
 
-    <style name="ButtonStyle" parent="Widget.AppCompat.Button">
-        <item name="android:textColor">@color/primaryTextColor</item>
-        <item name="android:background">@drawable/btn_selector</item>
+    <style name="AppTheme.NoActionBar.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.NoActionBar.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+
+    <style name="MyProgressBarTwo" parent="@style/Widget.AppCompat.ProgressBar.Horizontal">
+        <item name="colorButtonNormal">@android:color/holo_blue_dark</item>
+        <item name="colorControlActivated">@color/DeepSkyBlue</item>
+        <item name="android:progressDrawable">@drawable/barlayer</item>
+        <item name="android:minWidth">200dp</item>
     </style>
+
+    <!-- Outros temas -->
+    <style name="AppTheme.TelaCheia" parent="AppTheme">
+        <item name="android:windowActionBar">false</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowNoTitle">true</item>
+    </style>
+
 </resources>

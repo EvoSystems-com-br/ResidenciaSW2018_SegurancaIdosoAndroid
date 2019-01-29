@@ -1,5 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <color name="colorPrimary">#3f51b5</color>
+    <color name="colorPrimaryDark">#303f9f</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="BlueSky">#87CEEB</color>
+    <color name="Branco">#ffffff</color>
+    <color name="Preto">#000000</color>
+    <color name="Vermelho">#ff0000</color>
+    <color name="Azul">#0000ff</color>
+    <color name="TurquesaEscuro">#00CED1</color>
+    <color name="DeepSkyBlue">#00bfff</color>
+    <color name="silver">#C0C0C0</color>
+    <color name="grey31">#4f4f4f</color>
+    <color name="grey21">#363636</color>
+    <color name="cinza">#979797</color>
+    <color name="primary_text_disble_material_dark">#A9A9A9</color>
+
     <!-- ThemeCustom -->
     <color name="primaryColor">#263238</color>
     <color name="primaryLightColor">#4f5b62</color>
@@ -13,10 +29,6 @@
     <color name="secondaryDarkColor">#babdbe</color>
     <color name="secondaryTextColor">#000000</color>
     <color name="secondaryAccentColor">#00695c</color>
-
-    <color name="colorPrimary">#3F51B5</color>
-    <color name="colorPrimaryDark">#303F9F</color>
-    <color name="colorAccent">#FF4081</color>
 
     <color name="colorAlertQueda">#FF0000</color>
     <color name="colorNotAlertQueda">#00FF00</color>
